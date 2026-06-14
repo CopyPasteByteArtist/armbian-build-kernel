@@ -4,7 +4,7 @@
 # Copyright (C) 2021 https://github.com/ophub/kernel
 #==========================================================================
 
-name: Compile the kernel
+name: Build Armbian Kernel
 
 on:
   repository_dispatch:
@@ -78,10 +78,9 @@ on:
       kernel_sign:
         description: "Set the kernel custom signature"
         required: false
-        default: ""
+        default: "none"
         type: choice
         options:
-          - -ophub
           - -yourname
 
 env:
